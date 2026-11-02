@@ -1,10 +1,10 @@
-# SOC Dashboard: Risk-Based Vulnerability & Security Log Analytics
+# SOC Dashboard: Which Security Problems Should We Fix First?
 
 A dashboard that looks at **security logs** and **vulnerability scan results** together, and helps a security team decide what to fix first, check that fixes really happened, and report progress.
 
 ## Background
 
-This started as a team project for CSE 543 fall 2025 at Arizona State University: a tool that reads over a million security log events, uses machine learning to flag suspicious ones, and asks a local AI model for recommended actions.
+This started as a team project for CSE 543 at Arizona State University: a tool that reads over a million security log events, uses machine learning to flag suspicious ones, and asks a local AI model for recommended actions.
 
 I extended it to answer a practical question security teams face every week:
 
