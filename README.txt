@@ -1,1 +1,0 @@
---- Project for CSE 543 - AI-Powered Security Incident Reporting Tool ---
