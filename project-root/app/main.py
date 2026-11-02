@@ -671,7 +671,7 @@ Attack Type: {row['attack_type']}
 Priority: {row['priority']}
 
 Return JSON with:
-- "nist_phase": one of ["Identify","Protect","Detect","Respond","Recover"]
+- "nist_phase": one of ["Govern","Identify","Protect","Detect","Respond","Recover"]
 - "mitre_attack_mapping": one valid MITRE tactic from: {MITRE_TACTICS}
 - "attack_vector": one of {NIST_ATTACK_VECTORS}
 - "recommended_action": one practical sentence
