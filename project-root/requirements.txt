@@ -1,4 +1,10 @@
-streamlit
+streamlit==1.27.1
 elasticsearch==8.11.1
 pandas
 scikit-learn
+matplotlib
+plotly==5.22.0
+joblib
+transformers==4.35.2
+torch
+google-generativeai>=0.3.0
