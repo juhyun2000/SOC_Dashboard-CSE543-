@@ -1,7 +1,13 @@
+import argparse                    
+import os                           
 import random
 from datetime import datetime, timedelta
 
-NUM_LOGS = 1_000_000
+#  Default output: project-root/app/elis_industries_logs.log (relative to this file)
+#  Docker mounts project-root/app as /app, so the app can read it right away
+DEFAULT_OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                           "project-root", "app", "elis_industries_logs.log")
+
 users = ['jsmith', 'amanda', 'ravi', 'lee', 'admin', 'guest', 'emma', 'john_d', 'sylvia', 'ramon']
 components = ['AuthService', 'PaymentService', 'BackupManager', 'Firewall', 'Antivirus', 'Kernel', 'DBConnector', 'WebApp', 'PatchDaemon']
 severities = ['INFO', 'WARNING', 'ERROR', 'CRITICAL']
@@ -35,31 +41,44 @@ messages_by_severity = {
     ]
 }
 
+
 def random_ip():
     return f"{random.randint(10, 255)}.{random.randint(0,255)}.{random.randint(0,255)}.{random.randint(1,254)}"
 
-start_time = datetime.now() - timedelta(days=7)
-log_lines = []
 
-print("Generating logs...")
+def main():
+    # Define the options
+    ap = argparse.ArgumentParser(description="Generate synthetic security event logs")
+    ap.add_argument("--count", type=int, default=1_000_000, help="number of log lines")
+    ap.add_argument("--out", default=DEFAULT_OUT, help="output file path")
+    ap.add_argument("--seed", type=int, default=None, help="random seed (same seed = same logs)")
+    args = ap.parse_args()
 
-for i in range(NUM_LOGS):
-    timestamp = start_time + timedelta(seconds=i)
-    timestamp_str = timestamp.strftime('%m.%d.%Y %H:%M:%S')
+    if args.seed is not None:
+        random.seed(args.seed)
 
-    severity = random.choices(severities, weights=[0.6, 0.2, 0.15, 0.05])[0]
-    component = random.choice(components)
-    user = random.choice(users)
-    ip = random_ip()
+    start_time = datetime.now() - timedelta(seconds=args.count)   # logs end at "now"
+    log_lines = []
+    print("Generating logs...")
 
-    template = random.choice(messages_by_severity[severity])
-    message = template.format(user=user, component=component, ip=ip)
+    for i in range(args.count):                                   # NUM_LOGS → args.count
+        timestamp = start_time + timedelta(seconds=i)
+        timestamp_str = timestamp.strftime('%m.%d.%Y %H:%M:%S')
 
-    log_line = f"{timestamp_str} {severity} {component} {message}"
-    log_lines.append(log_line)
+        severity = random.choices(severities, weights=[0.6, 0.2, 0.15, 0.05])[0]
+        component = random.choice(components)
+        user = random.choice(users)
+        ip = random_ip()
 
-log_path = "/Users/pai/Downloads/elis_industries_logs.log"
-with open(log_path, "w") as f:
-    f.write("\n".join(log_lines))
+        template = random.choice(messages_by_severity[severity])
+        message = template.format(user=user, component=component, ip=ip)
+        log_lines.append(f"{timestamp_str} {severity} {component} {message}")
 
-print(f"✅ Done. {NUM_LOGS:,} logs saved to {log_path}")
+    with open(args.out, "w") as f:                                # log_path → args.out
+        f.write("\n".join(log_lines))
+
+    print(f"✅ Done. {args.count:,} logs saved to {args.out}")
+
+
+if __name__ == "__main__":                                        # runs only when executed directly
+    main()
