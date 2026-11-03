@@ -1,11 +1,234 @@
 finding_id,asset_id,hostname,cve,title,cvss,epss,kev,attack_technique,attack_tactic,first_seen,last_seen,ticket_id,ticket_status
-F-001,AST-001,paymentservice-prod-01,CVE-2021-34527,Windows Print Spooler RCE (PrintNightmare),8.8,0.94,Yes,T1068,TA0004,2026-10-20,2026-10-31,VUL0001001,Open
-F-002,AST-002,vpn-gateway-01,CVE-2023-4966,Citrix NetScaler session token leak (Citrix Bleed),7.5,0.96,Yes,T1190,TA0001,2026-10-28,2026-10-31,VUL0001002,In Progress
-F-003,AST-003,webapp-dev-03,CVE-2021-44228,Apache Log4j RCE (Log4Shell),10.0,0.97,Yes,T1190,TA0001,2026-09-15,2026-10-30,VUL0001003,Open
-F-004,AST-004,student-portal-01,,TLS 1.0/1.1 protocol enabled,6.5,0,No,T1557,TA0006,2026-08-01,2026-10-31,VUL0001004,Open
-F-005,AST-005,dbconnector-prod-05,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-10-10,2026-10-29,VUL0001005,Open
-F-006,AST-005,dbconnector-prod-05,CVE-2017-0144,Windows SMBv1 RCE (EternalBlue),8.1,0.96,Yes,T1210,TA0008,2026-09-01,2026-10-29,VUL0001006,Remediated
-F-007,AST-002,vpn-gateway-01,,Default administrative credentials,9.8,0,No,T1078.001; T1110,TA0001; TA0006,2026-10-05,2026-10-31,VUL0001007,Risk Accepted
-F-008,AST-004,student-portal-01,,SSL certificate expired,5.3,0,No,,,2026-10-25,2026-10-31,VUL0001008,Open
-F-009,,rpi-lab-cam-02,,Default administrative credentials,9.8,0,No,T1078.001; T1110,TA0001; TA0006,2026-10-01,2026-10-30,VUL0001009,Open
-F-010,AST-003,webapp-dev-03,CVE-2023-44487,HTTP/2 Rapid Reset DoS,7.5,0.80,Yes,T1499,TA0040,2026-10-26,2026-10-30,VUL0001010,Open
+F-0001,AST-001,authservice-prod-01,CVE-2020-1472,Netlogon elevation of privilege (Zerologon),10.0,0.95,Yes,T1068,TA0004,2026-09-19,2026-10-30,VUL0000001,Open
+F-0002,AST-001,authservice-prod-01,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-10-07,2026-10-30,VUL0000002,Risk Accepted
+F-0003,AST-001,authservice-prod-01,CVE-2022-0778,OpenSSL infinite loop (DoS),7.5,0.03,No,T1499,TA0040,2026-10-05,2026-10-30,VUL0000003,In Progress
+F-0004,AST-001,authservice-prod-01,CVE-2023-48795,SSH Terrapin prefix truncation,5.9,0.6,No,T1557,TA0006,2026-09-21,2026-10-30,VUL0000004,Open
+F-0005,AST-001,authservice-prod-01,,Default administrative credentials,9.8,0.0,No,T1078.001; T1110,TA0001; TA0006,2026-09-08,2026-10-30,VUL0000005,Open
+F-0006,AST-002,authservice-dev-02,CVE-2021-44228,Apache Log4j RCE (Log4Shell),10.0,0.97,Yes,T1190,TA0001,2026-09-27,2026-10-28,VUL0000006,Open
+F-0007,AST-002,authservice-dev-02,CVE-2023-48795,SSH Terrapin prefix truncation,5.9,0.6,No,T1557,TA0006,2026-09-13,2026-10-28,VUL0000007,In Progress
+F-0008,AST-002,authservice-dev-02,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-10-17,2026-10-28,VUL0000008,Risk Accepted
+F-0009,AST-002,authservice-dev-02,,SSL certificate expired,5.3,0.0,No,,,2026-08-01,2026-10-28,VUL0000009,Open
+F-0010,AST-002,authservice-dev-02,,Unsupported operating system version,10.0,0.0,No,,,2026-10-09,2026-10-28,VUL0000010,Open
+F-0011,AST-002,authservice-dev-02,,Web server directory listing enabled,5.3,0.0,No,,,2026-09-27,2026-10-28,VUL0000011,Open
+F-0012,AST-003,dbconnector-prod-03,CVE-2020-1472,Netlogon elevation of privilege (Zerologon),10.0,0.95,Yes,T1068,TA0004,2026-09-25,2026-11-03,VUL0000012,In Progress
+F-0013,AST-003,dbconnector-prod-03,CVE-2023-34362,MOVEit Transfer SQL injection,9.8,0.95,Yes,T1190,TA0001,2026-10-13,2026-11-03,VUL0000013,Open
+F-0014,AST-003,dbconnector-prod-03,CVE-2022-0778,OpenSSL infinite loop (DoS),7.5,0.03,No,T1499,TA0040,2026-07-29,2026-08-13,VUL0000014,Remediated
+F-0015,AST-003,dbconnector-prod-03,,Default administrative credentials,9.8,0.0,No,T1078.001; T1110,TA0001; TA0006,2026-10-11,2026-11-03,VUL0000015,In Progress
+F-0016,AST-003,dbconnector-prod-03,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-10-13,2026-11-03,VUL0000016,Open
+F-0017,AST-003,dbconnector-prod-03,,Missing endpoint protection agent,7.0,0.0,No,,,2026-09-30,2026-11-03,VUL0000017,Open
+F-0018,AST-004,webapp-prod-04,CVE-2017-0144,Windows SMBv1 RCE (EternalBlue),8.1,0.96,Yes,T1210,TA0008,2026-09-20,2026-10-29,VUL0000018,Open
+F-0019,AST-004,webapp-prod-04,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-09-22,2026-10-29,VUL0000019,Open
+F-0020,AST-005,webapp-prod-05,CVE-2023-44487,HTTP/2 Rapid Reset DoS,7.5,0.8,Yes,T1499,TA0040,2026-07-30,2026-09-05,VUL0000020,Open
+F-0021,AST-005,webapp-prod-05,CVE-2022-0778,OpenSSL infinite loop (DoS),7.5,0.03,No,T1499,TA0040,2026-08-15,2026-09-05,VUL0000021,In Progress
+F-0022,AST-005,webapp-prod-05,,Default administrative credentials,9.8,0.0,No,T1078.001; T1110,TA0001; TA0006,2026-07-27,2026-09-05,VUL0000022,Open
+F-0023,AST-005,webapp-prod-05,,Unsupported operating system version,10.0,0.0,No,,,2026-07-30,2026-09-05,VUL0000023,Open
+F-0024,AST-006,webapp-dev-06,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-10-01,2026-10-14,VUL0000024,Remediated
+F-0025,AST-006,webapp-dev-06,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-10-16,2026-10-27,VUL0000025,In Progress
+F-0026,AST-006,webapp-dev-06,,SSL certificate expired,5.3,0.0,No,,,2026-07-18,2026-10-27,VUL0000026,Remediated
+F-0027,AST-006,webapp-dev-06,,Unsupported operating system version,10.0,0.0,No,,,2026-09-26,2026-10-27,VUL0000027,Open
+F-0028,AST-006,webapp-dev-06,,Missing endpoint protection agent,7.0,0.0,No,,,2026-10-07,2026-10-07,VUL0000028,Remediated
+F-0029,AST-007,authservice-prod-07,CVE-2023-4966,Citrix NetScaler session token leak (Citrix Bleed),7.5,0.96,Yes,T1190,TA0001,2026-10-03,2026-10-27,VUL0000029,Open
+F-0030,AST-007,authservice-prod-07,CVE-2023-44487,HTTP/2 Rapid Reset DoS,7.5,0.8,Yes,T1499,TA0040,2026-09-13,2026-10-27,VUL0000030,In Progress
+F-0031,AST-007,authservice-prod-07,CVE-2022-0778,OpenSSL infinite loop (DoS),7.5,0.03,No,T1499,TA0040,2026-09-12,2026-10-27,VUL0000031,Open
+F-0032,AST-007,authservice-prod-07,CVE-2023-48795,SSH Terrapin prefix truncation,5.9,0.6,No,T1557,TA0006,2026-10-14,2026-10-27,VUL0000032,Risk Accepted
+F-0033,AST-007,authservice-prod-07,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-08-02,2026-10-27,VUL0000033,Open
+F-0034,AST-007,authservice-prod-07,,Web server directory listing enabled,5.3,0.0,No,,,2026-06-09,2026-10-27,VUL0000034,Open
+F-0035,AST-008,authservice-prod-08,,Default administrative credentials,9.8,0.0,No,T1078.001; T1110,TA0001; TA0006,2026-10-10,2026-10-17,VUL0000035,Remediated
+F-0036,AST-008,authservice-prod-08,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-07-31,2026-11-01,VUL0000036,In Progress
+F-0037,AST-008,authservice-prod-08,,Missing endpoint protection agent,7.0,0.0,No,,,2026-10-09,2026-11-01,VUL0000037,In Progress
+F-0038,AST-009,backupmanager-prod-09,CVE-2021-44228,Apache Log4j RCE (Log4Shell),10.0,0.97,Yes,T1190,TA0001,2026-10-16,2026-10-29,VUL0000038,Open
+F-0039,AST-009,backupmanager-prod-09,CVE-2021-34527,Windows Print Spooler RCE (PrintNightmare),8.8,0.94,Yes,T1068,TA0004,2026-10-19,2026-10-19,VUL0000039,Remediated
+F-0040,AST-009,backupmanager-prod-09,CVE-2020-1472,Netlogon elevation of privilege (Zerologon),10.0,0.95,Yes,T1068,TA0004,2026-09-17,2026-09-28,VUL0000040,Remediated
+F-0041,AST-010,dbconnector-prod-10,CVE-2023-4966,Citrix NetScaler session token leak (Citrix Bleed),7.5,0.96,Yes,T1190,TA0001,2026-08-08,2026-10-27,VUL0000041,Open
+F-0042,AST-010,dbconnector-prod-10,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-09-25,2026-10-27,VUL0000042,Open
+F-0043,AST-011,dbconnector-prod-11,CVE-2023-48795,SSH Terrapin prefix truncation,5.9,0.6,No,T1557,TA0006,2026-09-17,2026-10-27,VUL0000043,Risk Accepted
+F-0044,AST-011,dbconnector-prod-11,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-10-05,2026-10-27,VUL0000044,Open
+F-0045,AST-011,dbconnector-prod-11,,Missing endpoint protection agent,7.0,0.0,No,,,2026-10-15,2026-10-17,VUL0000045,Remediated
+F-0046,AST-011,dbconnector-prod-11,,Web server directory listing enabled,5.3,0.0,No,,,2026-09-24,2026-10-27,VUL0000046,Open
+F-0047,AST-012,backupmanager-prod-12,CVE-2023-34362,MOVEit Transfer SQL injection,9.8,0.95,Yes,T1190,TA0001,2026-09-21,2026-11-03,VUL0000047,Open
+F-0048,AST-012,backupmanager-prod-12,CVE-2022-0778,OpenSSL infinite loop (DoS),7.5,0.03,No,T1499,TA0040,2026-07-29,2026-11-03,VUL0000048,In Progress
+F-0049,AST-012,backupmanager-prod-12,,Default administrative credentials,9.8,0.0,No,T1078.001; T1110,TA0001; TA0006,2026-07-07,2026-11-03,VUL0000049,In Progress
+F-0050,AST-013,dbconnector-prod-13,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-10-05,2026-10-19,VUL0000050,Remediated
+F-0051,AST-013,dbconnector-prod-13,,SSL certificate expired,5.3,0.0,No,,,2026-09-20,2026-11-03,VUL0000051,Open
+F-0052,AST-014,webapp-stag-14,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-10-01,2026-10-31,VUL0000052,Open
+F-0053,AST-014,webapp-stag-14,,SSL certificate expired,5.3,0.0,No,,,2026-10-08,2026-10-31,VUL0000053,Open
+F-0054,AST-015,paymentservice-prod-15,CVE-2023-44487,HTTP/2 Rapid Reset DoS,7.5,0.8,Yes,T1499,TA0040,2026-09-28,2026-10-27,VUL0000054,Open
+F-0055,AST-015,paymentservice-prod-15,CVE-2023-48795,SSH Terrapin prefix truncation,5.9,0.6,No,T1557,TA0006,2026-07-29,2026-10-27,VUL0000055,Open
+F-0056,AST-016,webapp-dev-16,CVE-2017-0144,Windows SMBv1 RCE (EternalBlue),8.1,0.96,Yes,T1210,TA0008,2026-10-21,2026-11-02,VUL0000056,Open
+F-0057,AST-016,webapp-dev-16,,Default administrative credentials,9.8,0.0,No,T1078.001; T1110,TA0001; TA0006,2026-10-02,2026-11-02,VUL0000057,Open
+F-0058,AST-017,paymentservice-dev-17,CVE-2021-44228,Apache Log4j RCE (Log4Shell),10.0,0.97,Yes,T1190,TA0001,2026-10-07,2026-11-01,VUL0000058,Open
+F-0059,AST-017,paymentservice-dev-17,,Default administrative credentials,9.8,0.0,No,T1078.001; T1110,TA0001; TA0006,2026-10-16,2026-11-01,VUL0000059,Open
+F-0060,AST-017,paymentservice-dev-17,,SSL certificate expired,5.3,0.0,No,,,2026-09-24,2026-11-01,VUL0000060,In Progress
+F-0061,AST-017,paymentservice-dev-17,,Unsupported operating system version,10.0,0.0,No,,,2026-10-19,2026-11-01,VUL0000061,Open
+F-0062,AST-017,paymentservice-dev-17,,Missing endpoint protection agent,7.0,0.0,No,,,2026-10-06,2026-11-01,VUL0000062,In Progress
+F-0063,AST-017,paymentservice-dev-17,,Web server directory listing enabled,5.3,0.0,No,,,2026-09-25,2026-11-01,VUL0000063,Risk Accepted
+F-0064,AST-018,paymentservice-prod-18,CVE-2021-44228,Apache Log4j RCE (Log4Shell),10.0,0.97,Yes,T1190,TA0001,2026-08-07,2026-11-03,VUL0000064,In Progress
+F-0065,AST-018,paymentservice-prod-18,CVE-2017-0144,Windows SMBv1 RCE (EternalBlue),8.1,0.96,Yes,T1210,TA0008,2026-10-12,2026-11-03,VUL0000065,In Progress
+F-0066,AST-018,paymentservice-prod-18,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-10-02,2026-10-02,VUL0000066,Remediated
+F-0067,AST-018,paymentservice-prod-18,,Default administrative credentials,9.8,0.0,No,T1078.001; T1110,TA0001; TA0006,2026-09-24,2026-11-03,VUL0000067,Open
+F-0068,AST-018,paymentservice-prod-18,,SSL certificate expired,5.3,0.0,No,,,2026-10-17,2026-11-03,VUL0000068,Risk Accepted
+F-0069,AST-018,paymentservice-prod-18,,Unsupported operating system version,10.0,0.0,No,,,2026-10-22,2026-11-03,VUL0000069,Open
+F-0070,AST-019,webapp-dev-19,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-09-26,2026-10-29,VUL0000070,Open
+F-0071,AST-019,webapp-dev-19,CVE-2023-48795,SSH Terrapin prefix truncation,5.9,0.6,No,T1557,TA0006,2026-10-18,2026-10-29,VUL0000071,Open
+F-0072,AST-019,webapp-dev-19,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-10-16,2026-10-29,VUL0000072,Open
+F-0073,AST-019,webapp-dev-19,,SSL certificate expired,5.3,0.0,No,,,2026-09-16,2026-10-29,VUL0000073,Open
+F-0074,AST-020,paymentservice-prod-20,CVE-2021-34527,Windows Print Spooler RCE (PrintNightmare),8.8,0.94,Yes,T1068,TA0004,2026-09-20,2026-11-03,VUL0000074,Open
+F-0075,AST-020,paymentservice-prod-20,CVE-2017-0144,Windows SMBv1 RCE (EternalBlue),8.1,0.96,Yes,T1210,TA0008,2026-10-18,2026-10-30,VUL0000075,Remediated
+F-0076,AST-020,paymentservice-prod-20,CVE-2022-0778,OpenSSL infinite loop (DoS),7.5,0.03,No,T1499,TA0040,2026-10-10,2026-11-03,VUL0000076,Remediated
+F-0077,AST-020,paymentservice-prod-20,CVE-2023-48795,SSH Terrapin prefix truncation,5.9,0.6,No,T1557,TA0006,2026-08-02,2026-11-03,VUL0000077,Open
+F-0078,AST-020,paymentservice-prod-20,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-10-19,2026-11-03,VUL0000078,In Progress
+F-0079,AST-021,backupmanager-prod-21,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-10-15,2026-11-01,VUL0000079,Open
+F-0080,AST-021,backupmanager-prod-21,,SSL certificate expired,5.3,0.0,No,,,2026-09-17,2026-11-01,VUL0000080,In Progress
+F-0081,AST-021,backupmanager-prod-21,,Unsupported operating system version,10.0,0.0,No,,,2026-10-11,2026-11-01,VUL0000081,Open
+F-0082,AST-022,dbconnector-prod-22,CVE-2023-4966,Citrix NetScaler session token leak (Citrix Bleed),7.5,0.96,Yes,T1190,TA0001,2026-09-26,2026-10-08,VUL0000082,Remediated
+F-0083,AST-022,dbconnector-prod-22,,Default administrative credentials,9.8,0.0,No,T1078.001; T1110,TA0001; TA0006,2026-09-22,2026-11-01,VUL0000083,Remediated
+F-0084,AST-022,dbconnector-prod-22,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-09-28,2026-11-01,VUL0000084,Open
+F-0085,AST-023,kernel-prod-23,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-08-26,2026-10-31,VUL0000085,Open
+F-0086,AST-023,kernel-prod-23,,Unsupported operating system version,10.0,0.0,No,,,2026-09-26,2026-10-31,VUL0000086,Open
+F-0087,AST-023,kernel-prod-23,,Missing endpoint protection agent,7.0,0.0,No,,,2026-09-03,2026-10-31,VUL0000087,Open
+F-0088,AST-023,kernel-prod-23,,Web server directory listing enabled,5.3,0.0,No,,,2026-09-19,2026-10-31,VUL0000088,In Progress
+F-0089,AST-024,backupmanager-dev-24,CVE-2021-34527,Windows Print Spooler RCE (PrintNightmare),8.8,0.94,Yes,T1068,TA0004,2026-10-01,2026-10-30,VUL0000089,In Progress
+F-0090,AST-024,backupmanager-dev-24,CVE-2017-0144,Windows SMBv1 RCE (EternalBlue),8.1,0.96,Yes,T1210,TA0008,2026-10-19,2026-10-30,VUL0000090,Open
+F-0091,AST-024,backupmanager-dev-24,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-09-21,2026-10-30,VUL0000091,Open
+F-0092,AST-024,backupmanager-dev-24,,Missing endpoint protection agent,7.0,0.0,No,,,2026-07-05,2026-10-30,VUL0000092,Open
+F-0093,AST-024,backupmanager-dev-24,,Web server directory listing enabled,5.3,0.0,No,,,2026-06-24,2026-10-30,VUL0000093,Open
+F-0094,AST-025,dbconnector-stag-25,,Missing endpoint protection agent,7.0,0.0,No,,,2026-06-15,2026-08-08,VUL0000094,Remediated
+F-0095,AST-025,dbconnector-stag-25,,Web server directory listing enabled,5.3,0.0,No,,,2026-09-25,2026-10-31,VUL0000095,Open
+F-0096,AST-026,dbconnector-stag-26,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-10-09,2026-11-01,VUL0000096,Open
+F-0097,AST-026,dbconnector-stag-26,,Missing endpoint protection agent,7.0,0.0,No,,,2026-10-09,2026-11-01,VUL0000097,Open
+F-0098,AST-026,dbconnector-stag-26,,Web server directory listing enabled,5.3,0.0,No,,,2026-08-01,2026-11-01,VUL0000098,Remediated
+F-0099,AST-027,backupmanager-prod-27,CVE-2023-34362,MOVEit Transfer SQL injection,9.8,0.95,Yes,T1190,TA0001,2026-07-19,2026-10-28,VUL0000099,Open
+F-0100,AST-027,backupmanager-prod-27,CVE-2022-0778,OpenSSL infinite loop (DoS),7.5,0.03,No,T1499,TA0040,2026-09-07,2026-10-28,VUL0000100,In Progress
+F-0101,AST-027,backupmanager-prod-27,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-06-14,2026-10-28,VUL0000101,Open
+F-0102,AST-027,backupmanager-prod-27,,SSL certificate expired,5.3,0.0,No,,,2026-09-27,2026-10-28,VUL0000102,Open
+F-0103,AST-027,backupmanager-prod-27,,Missing endpoint protection agent,7.0,0.0,No,,,2026-10-07,2026-10-26,VUL0000103,Remediated
+F-0104,AST-028,dbconnector-prod-28,CVE-2021-34527,Windows Print Spooler RCE (PrintNightmare),8.8,0.94,Yes,T1068,TA0004,2026-07-11,2026-07-28,VUL0000104,In Progress
+F-0105,AST-028,dbconnector-prod-28,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-06-26,2026-07-28,VUL0000105,Open
+F-0106,AST-029,authservice-stag-29,CVE-2017-0144,Windows SMBv1 RCE (EternalBlue),8.1,0.96,Yes,T1210,TA0008,2026-09-27,2026-11-01,VUL0000106,In Progress
+F-0107,AST-029,authservice-stag-29,CVE-2023-48795,SSH Terrapin prefix truncation,5.9,0.6,No,T1557,TA0006,2026-10-10,2026-11-01,VUL0000107,In Progress
+F-0108,AST-029,authservice-stag-29,,Default administrative credentials,9.8,0.0,No,T1078.001; T1110,TA0001; TA0006,2026-06-05,2026-11-01,VUL0000108,In Progress
+F-0109,AST-029,authservice-stag-29,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-10-05,2026-11-01,VUL0000109,Open
+F-0110,AST-029,authservice-stag-29,,Missing endpoint protection agent,7.0,0.0,No,,,2026-06-26,2026-11-01,VUL0000110,Open
+F-0111,AST-030,dbconnector-prod-30,CVE-2023-44487,HTTP/2 Rapid Reset DoS,7.5,0.8,Yes,T1499,TA0040,2026-09-18,2026-10-28,VUL0000111,In Progress
+F-0112,AST-030,dbconnector-prod-30,CVE-2023-48795,SSH Terrapin prefix truncation,5.9,0.6,No,T1557,TA0006,2026-09-17,2026-10-28,VUL0000112,In Progress
+F-0113,AST-030,dbconnector-prod-30,,Default administrative credentials,9.8,0.0,No,T1078.001; T1110,TA0001; TA0006,2026-06-15,2026-10-28,VUL0000113,Risk Accepted
+F-0114,AST-030,dbconnector-prod-30,,Unsupported operating system version,10.0,0.0,No,,,2026-09-28,2026-10-28,VUL0000114,Open
+F-0115,AST-030,dbconnector-prod-30,,Missing endpoint protection agent,7.0,0.0,No,,,2026-10-15,2026-10-28,VUL0000115,Open
+F-0116,AST-031,authservice-dev-31,CVE-2017-0144,Windows SMBv1 RCE (EternalBlue),8.1,0.96,Yes,T1210,TA0008,2026-06-06,2026-07-21,VUL0000116,Remediated
+F-0117,AST-031,authservice-dev-31,CVE-2023-34362,MOVEit Transfer SQL injection,9.8,0.95,Yes,T1190,TA0001,2026-10-02,2026-10-18,VUL0000117,Remediated
+F-0118,AST-031,authservice-dev-31,CVE-2023-48795,SSH Terrapin prefix truncation,5.9,0.6,No,T1557,TA0006,2026-10-14,2026-10-29,VUL0000118,Open
+F-0119,AST-031,authservice-dev-31,,Default administrative credentials,9.8,0.0,No,T1078.001; T1110,TA0001; TA0006,2026-09-08,2026-10-29,VUL0000119,Open
+F-0120,AST-031,authservice-dev-31,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-10-05,2026-10-29,VUL0000120,Open
+F-0121,AST-032,dbconnector-prod-32,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-09-18,2026-11-02,VUL0000121,In Progress
+F-0122,AST-032,dbconnector-prod-32,,Web server directory listing enabled,5.3,0.0,No,,,2026-08-18,2026-11-02,VUL0000122,Risk Accepted
+F-0123,AST-033,dbconnector-prod-33,CVE-2023-48795,SSH Terrapin prefix truncation,5.9,0.6,No,T1557,TA0006,2026-04-04,2026-07-18,VUL0000123,In Progress
+F-0124,AST-033,dbconnector-prod-33,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-03-30,2026-07-18,VUL0000124,Risk Accepted
+F-0125,AST-033,dbconnector-prod-33,,Web server directory listing enabled,5.3,0.0,No,,,2026-05-13,2026-07-18,VUL0000125,Open
+F-0126,AST-034,webapp-dev-34,CVE-2017-0144,Windows SMBv1 RCE (EternalBlue),8.1,0.96,Yes,T1210,TA0008,2026-09-17,2026-10-30,VUL0000126,Open
+F-0127,AST-034,webapp-dev-34,,Default administrative credentials,9.8,0.0,No,T1078.001; T1110,TA0001; TA0006,2026-10-09,2026-10-30,VUL0000127,In Progress
+F-0128,AST-034,webapp-dev-34,,Unsupported operating system version,10.0,0.0,No,,,2026-09-18,2026-10-11,VUL0000128,Remediated
+F-0129,AST-034,webapp-dev-34,,Missing endpoint protection agent,7.0,0.0,No,,,2026-06-27,2026-10-30,VUL0000129,In Progress
+F-0130,AST-034,webapp-dev-34,,Web server directory listing enabled,5.3,0.0,No,,,2026-10-02,2026-10-30,VUL0000130,In Progress
+F-0131,AST-035,webapp-prod-35,CVE-2017-0144,Windows SMBv1 RCE (EternalBlue),8.1,0.96,Yes,T1210,TA0008,2026-10-07,2026-11-03,VUL0000131,Open
+F-0132,AST-035,webapp-prod-35,CVE-2023-44487,HTTP/2 Rapid Reset DoS,7.5,0.8,Yes,T1499,TA0040,2026-10-16,2026-11-03,VUL0000132,In Progress
+F-0133,AST-035,webapp-prod-35,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-09-24,2026-11-03,VUL0000133,In Progress
+F-0134,AST-035,webapp-prod-35,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-10-04,2026-11-03,VUL0000134,In Progress
+F-0135,AST-035,webapp-prod-35,,Unsupported operating system version,10.0,0.0,No,,,2026-07-24,2026-11-03,VUL0000135,In Progress
+F-0136,AST-035,webapp-prod-35,,Web server directory listing enabled,5.3,0.0,No,,,2026-08-19,2026-11-03,VUL0000136,Risk Accepted
+F-0137,AST-036,webapp-stag-36,,SSL certificate expired,5.3,0.0,No,,,2026-09-19,2026-10-27,VUL0000137,In Progress
+F-0138,AST-036,webapp-stag-36,,Missing endpoint protection agent,7.0,0.0,No,,,2026-07-23,2026-10-27,VUL0000138,In Progress
+F-0139,AST-037,webapp-prod-37,CVE-2021-44228,Apache Log4j RCE (Log4Shell),10.0,0.97,Yes,T1190,TA0001,2026-10-04,2026-10-29,VUL0000139,Risk Accepted
+F-0140,AST-037,webapp-prod-37,CVE-2023-4966,Citrix NetScaler session token leak (Citrix Bleed),7.5,0.96,Yes,T1190,TA0001,2026-08-25,2026-10-29,VUL0000140,Remediated
+F-0141,AST-037,webapp-prod-37,CVE-2023-34362,MOVEit Transfer SQL injection,9.8,0.95,Yes,T1190,TA0001,2026-07-19,2026-09-17,VUL0000141,Remediated
+F-0142,AST-037,webapp-prod-37,,Default administrative credentials,9.8,0.0,No,T1078.001; T1110,TA0001; TA0006,2026-10-16,2026-10-29,VUL0000142,Risk Accepted
+F-0143,AST-037,webapp-prod-37,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-08-13,2026-10-29,VUL0000143,In Progress
+F-0144,AST-037,webapp-prod-37,,Unsupported operating system version,10.0,0.0,No,,,2026-07-01,2026-10-29,VUL0000144,Open
+F-0145,AST-038,webapp-prod-38,CVE-2023-4966,Citrix NetScaler session token leak (Citrix Bleed),7.5,0.96,Yes,T1190,TA0001,2026-05-13,2026-08-25,VUL0000145,Open
+F-0146,AST-038,webapp-prod-38,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-05-12,2026-05-17,VUL0000146,Remediated
+F-0147,AST-038,webapp-prod-38,CVE-2023-48795,SSH Terrapin prefix truncation,5.9,0.6,No,T1557,TA0006,2026-07-29,2026-08-25,VUL0000147,In Progress
+F-0148,AST-038,webapp-prod-38,,SSL certificate expired,5.3,0.0,No,,,2026-04-15,2026-08-25,VUL0000148,Open
+F-0149,AST-038,webapp-prod-38,,Web server directory listing enabled,5.3,0.0,No,,,2026-08-03,2026-08-25,VUL0000149,Risk Accepted
+F-0150,AST-039,webapp-stag-39,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-09-19,2026-10-28,VUL0000150,In Progress
+F-0151,AST-039,webapp-stag-39,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-09-23,2026-10-28,VUL0000151,Open
+F-0152,AST-039,webapp-stag-39,,Web server directory listing enabled,5.3,0.0,No,,,2026-06-10,2026-10-28,VUL0000152,Open
+F-0153,AST-040,firewall-stag-40,CVE-2021-44228,Apache Log4j RCE (Log4Shell),10.0,0.97,Yes,T1190,TA0001,2026-06-06,2026-11-01,VUL0000153,Open
+F-0154,AST-040,firewall-stag-40,CVE-2023-44487,HTTP/2 Rapid Reset DoS,7.5,0.8,Yes,T1499,TA0040,2026-09-25,2026-11-01,VUL0000154,Open
+F-0155,AST-040,firewall-stag-40,,SSL certificate expired,5.3,0.0,No,,,2026-10-22,2026-11-01,VUL0000155,Risk Accepted
+F-0156,AST-040,firewall-stag-40,,Unsupported operating system version,10.0,0.0,No,,,2026-10-01,2026-11-01,VUL0000156,Risk Accepted
+F-0157,AST-040,firewall-stag-40,,Web server directory listing enabled,5.3,0.0,No,,,2026-10-02,2026-11-01,VUL0000157,Open
+F-0158,AST-041,antivirus-prod-41,CVE-2022-0778,OpenSSL infinite loop (DoS),7.5,0.03,No,T1499,TA0040,2026-10-16,2026-11-03,VUL0000158,Open
+F-0159,AST-041,antivirus-prod-41,CVE-2023-48795,SSH Terrapin prefix truncation,5.9,0.6,No,T1557,TA0006,2026-06-21,2026-11-03,VUL0000159,Open
+F-0160,AST-041,antivirus-prod-41,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-07-20,2026-11-03,VUL0000160,Open
+F-0161,AST-041,antivirus-prod-41,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-07-29,2026-11-03,VUL0000161,Open
+F-0162,AST-041,antivirus-prod-41,,SSL certificate expired,5.3,0.0,No,,,2026-10-18,2026-11-03,VUL0000162,In Progress
+F-0163,AST-042,authservice-prod-42,CVE-2022-0778,OpenSSL infinite loop (DoS),7.5,0.03,No,T1499,TA0040,2026-10-12,2026-10-31,VUL0000163,Risk Accepted
+F-0164,AST-042,authservice-prod-42,,SSL certificate expired,5.3,0.0,No,,,2026-08-15,2026-10-31,VUL0000164,In Progress
+F-0165,AST-042,authservice-prod-42,,Unsupported operating system version,10.0,0.0,No,,,2026-10-10,2026-10-31,VUL0000165,In Progress
+F-0166,AST-042,authservice-prod-42,,Missing endpoint protection agent,7.0,0.0,No,,,2026-10-18,2026-10-31,VUL0000166,Open
+F-0167,AST-043,antivirus-prod-43,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-10-11,2026-10-28,VUL0000167,Risk Accepted
+F-0168,AST-043,antivirus-prod-43,,Missing endpoint protection agent,7.0,0.0,No,,,2026-09-13,2026-10-28,VUL0000168,In Progress
+F-0169,AST-043,antivirus-prod-43,,Web server directory listing enabled,5.3,0.0,No,,,2026-07-23,2026-10-28,VUL0000169,Open
+F-0170,AST-044,authservice-prod-44,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-10-11,2026-10-30,VUL0000170,Risk Accepted
+F-0171,AST-044,authservice-prod-44,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-09-13,2026-10-30,VUL0000171,In Progress
+F-0172,AST-044,authservice-prod-44,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-10-17,2026-10-30,VUL0000172,In Progress
+F-0173,AST-044,authservice-prod-44,,Web server directory listing enabled,5.3,0.0,No,,,2026-09-16,2026-10-14,VUL0000173,Remediated
+F-0174,AST-045,authservice-prod-45,CVE-2023-34362,MOVEit Transfer SQL injection,9.8,0.95,Yes,T1190,TA0001,2026-09-21,2026-11-02,VUL0000174,Open
+F-0175,AST-045,authservice-prod-45,CVE-2022-0778,OpenSSL infinite loop (DoS),7.5,0.03,No,T1499,TA0040,2026-10-23,2026-11-02,VUL0000175,Open
+F-0176,AST-046,webapp-prod-46,CVE-2021-44228,Apache Log4j RCE (Log4Shell),10.0,0.97,Yes,T1190,TA0001,2026-06-18,2026-10-30,VUL0000176,Open
+F-0177,AST-046,webapp-prod-46,CVE-2023-34362,MOVEit Transfer SQL injection,9.8,0.95,Yes,T1190,TA0001,2026-09-19,2026-10-30,VUL0000177,Open
+F-0178,AST-046,webapp-prod-46,CVE-2023-48795,SSH Terrapin prefix truncation,5.9,0.6,No,T1557,TA0006,2026-09-17,2026-10-30,VUL0000178,Open
+F-0179,AST-046,webapp-prod-46,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-08-27,2026-09-03,VUL0000179,Remediated
+F-0180,AST-046,webapp-prod-46,,SSL certificate expired,5.3,0.0,No,,,2026-10-05,2026-10-30,VUL0000180,In Progress
+F-0181,AST-046,webapp-prod-46,,Web server directory listing enabled,5.3,0.0,No,,,2026-10-15,2026-10-30,VUL0000181,In Progress
+F-0182,AST-047,webapp-prod-47,CVE-2017-0144,Windows SMBv1 RCE (EternalBlue),8.1,0.96,Yes,T1210,TA0008,2026-10-13,2026-11-03,VUL0000182,Open
+F-0183,AST-047,webapp-prod-47,CVE-2023-34362,MOVEit Transfer SQL injection,9.8,0.95,Yes,T1190,TA0001,2026-07-25,2026-11-03,VUL0000183,Open
+F-0184,AST-047,webapp-prod-47,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-08-18,2026-10-18,VUL0000184,Remediated
+F-0185,AST-047,webapp-prod-47,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-10-07,2026-11-03,VUL0000185,Open
+F-0186,AST-047,webapp-prod-47,,SSL certificate expired,5.3,0.0,No,,,2026-09-20,2026-11-03,VUL0000186,Open
+F-0187,AST-048,webapp-prod-48,CVE-2017-0144,Windows SMBv1 RCE (EternalBlue),8.1,0.96,Yes,T1210,TA0008,2026-10-21,2026-10-31,VUL0000187,In Progress
+F-0188,AST-048,webapp-prod-48,CVE-2023-48795,SSH Terrapin prefix truncation,5.9,0.6,No,T1557,TA0006,2026-09-07,2026-10-31,VUL0000188,Open
+F-0189,AST-048,webapp-prod-48,,Default administrative credentials,9.8,0.0,No,T1078.001; T1110,TA0001; TA0006,2026-10-01,2026-10-31,VUL0000189,Open
+F-0190,AST-048,webapp-prod-48,,Unsupported operating system version,10.0,0.0,No,,,2026-09-29,2026-10-31,VUL0000190,Open
+F-0191,AST-048,webapp-prod-48,,Missing endpoint protection agent,7.0,0.0,No,,,2026-07-14,2026-10-31,VUL0000191,Open
+F-0192,AST-049,webapp-prod-49,CVE-2021-44228,Apache Log4j RCE (Log4Shell),10.0,0.97,Yes,T1190,TA0001,2026-09-29,2026-10-31,VUL0000192,Open
+F-0193,AST-049,webapp-prod-49,CVE-2017-0144,Windows SMBv1 RCE (EternalBlue),8.1,0.96,Yes,T1210,TA0008,2026-09-24,2026-10-31,VUL0000193,Risk Accepted
+F-0194,AST-049,webapp-prod-49,CVE-2022-0778,OpenSSL infinite loop (DoS),7.5,0.03,No,T1499,TA0040,2026-10-03,2026-10-31,VUL0000194,In Progress
+F-0195,AST-050,webapp-prod-50,CVE-2023-4966,Citrix NetScaler session token leak (Citrix Bleed),7.5,0.96,Yes,T1190,TA0001,2026-10-03,2026-10-31,VUL0000195,In Progress
+F-0196,AST-050,webapp-prod-50,CVE-2022-0778,OpenSSL infinite loop (DoS),7.5,0.03,No,T1499,TA0040,2026-10-13,2026-10-31,VUL0000196,Open
+F-0197,AST-050,webapp-prod-50,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-10-17,2026-10-31,VUL0000197,Open
+F-0198,AST-050,webapp-prod-50,,SSL certificate expired,5.3,0.0,No,,,2026-10-08,2026-10-31,VUL0000198,Open
+F-0199,AST-050,webapp-prod-50,,Missing endpoint protection agent,7.0,0.0,No,,,2026-10-04,2026-10-31,VUL0000199,Open
+F-0200,AST-051,webapp-dev-51,CVE-2021-34527,Windows Print Spooler RCE (PrintNightmare),8.8,0.94,Yes,T1068,TA0004,2026-07-09,2026-07-26,VUL0000200,Risk Accepted
+F-0201,AST-051,webapp-dev-51,CVE-2017-0144,Windows SMBv1 RCE (EternalBlue),8.1,0.96,Yes,T1210,TA0008,2026-06-11,2026-07-26,VUL0000201,Open
+F-0202,AST-051,webapp-dev-51,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-03-10,2026-07-26,VUL0000202,Open
+F-0203,AST-051,webapp-dev-51,,Unsupported operating system version,10.0,0.0,No,,,2026-04-01,2026-07-26,VUL0000203,Open
+F-0204,AST-052,webapp-prod-52,CVE-2022-0778,OpenSSL infinite loop (DoS),7.5,0.03,No,T1499,TA0040,2026-10-16,2026-11-01,VUL0000204,Open
+F-0205,AST-052,webapp-prod-52,CVE-2023-48795,SSH Terrapin prefix truncation,5.9,0.6,No,T1557,TA0006,2026-10-15,2026-11-01,VUL0000205,In Progress
+F-0206,AST-052,webapp-prod-52,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-09-19,2026-11-01,VUL0000206,Open
+F-0207,AST-052,webapp-prod-52,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-10-11,2026-11-01,VUL0000207,Open
+F-0208,AST-052,webapp-prod-52,,Web server directory listing enabled,5.3,0.0,No,,,2026-10-02,2026-11-01,VUL0000208,Open
+F-0209,AST-053,webapp-prod-53,,Default administrative credentials,9.8,0.0,No,T1078.001; T1110,TA0001; TA0006,2026-09-24,2026-10-31,VUL0000209,In Progress
+F-0210,AST-053,webapp-prod-53,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-10-20,2026-10-31,VUL0000210,Open
+F-0211,AST-053,webapp-prod-53,,SSL certificate expired,5.3,0.0,No,,,2026-07-01,2026-10-31,VUL0000211,In Progress
+F-0212,AST-053,webapp-prod-53,,Missing endpoint protection agent,7.0,0.0,No,,,2026-07-04,2026-10-31,VUL0000212,Open
+F-0213,AST-053,webapp-prod-53,,Web server directory listing enabled,5.3,0.0,No,,,2026-10-12,2026-10-31,VUL0000213,Open
+F-0214,,webapp-prod-x17,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-08-25,2026-11-02,VUL0000214,Open
+F-0215,,webapp-prod-x17,CVE-2022-0778,OpenSSL infinite loop (DoS),7.5,0.03,No,T1499,TA0040,2026-09-18,2026-10-06,VUL0000215,Remediated
+F-0216,,webapp-prod-x17,,Default administrative credentials,9.8,0.0,No,T1078.001; T1110,TA0001; TA0006,2026-10-19,2026-11-02,VUL0000216,Open
+F-0217,,webapp-prod-x17,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-10-14,2026-11-02,VUL0000217,Open
+F-0218,,webapp-prod-x17,,SSL certificate expired,5.3,0.0,No,,,2026-09-25,2026-11-02,VUL0000218,In Progress
+F-0219,,webapp-prod-x17,,Missing endpoint protection agent,7.0,0.0,No,,,2026-10-13,2026-11-02,VUL0000219,Open
+F-0220,,rpi-lab-cam-02,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-10-17,2026-11-02,VUL0000220,Open
+F-0221,,rpi-lab-cam-02,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-10-05,2026-11-02,VUL0000221,Open
+F-0222,,rpi-lab-cam-02,,TLS 1.0/1.1 protocol enabled,6.5,0.0,No,T1557,TA0006,2026-08-09,2026-11-02,VUL0000222,Open
+F-0223,,desktop-7hq2k,CVE-2017-0144,Windows SMBv1 RCE (EternalBlue),8.1,0.96,Yes,T1210,TA0008,2026-06-20,2026-11-02,VUL0000223,In Progress
+F-0224,,desktop-7hq2k,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-08-14,2026-11-02,VUL0000224,Open
+F-0225,,desktop-7hq2k,,Default administrative credentials,9.8,0.0,No,T1078.001; T1110,TA0001; TA0006,2026-10-04,2026-11-02,VUL0000225,Open
+F-0226,,desktop-7hq2k,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-10-05,2026-11-02,VUL0000226,Open
+F-0227,,desktop-7hq2k,,Unsupported operating system version,10.0,0.0,No,,,2026-10-02,2026-11-02,VUL0000227,Risk Accepted
+F-0228,,nas-backup-old,CVE-2023-34362,MOVEit Transfer SQL injection,9.8,0.95,Yes,T1190,TA0001,2026-09-24,2026-11-02,VUL0000228,Open
+F-0229,,nas-backup-old,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-10-10,2026-11-02,VUL0000229,In Progress
+F-0230,,nas-backup-old,CVE-2022-0778,OpenSSL infinite loop (DoS),7.5,0.03,No,T1499,TA0040,2026-10-02,2026-11-02,VUL0000230,In Progress
+F-0231,,nas-backup-old,,SMB signing not required,5.3,0.0,No,T1557,TA0006,2026-10-13,2026-11-02,VUL0000231,In Progress
+F-0232,,nas-backup-old,,SSL certificate expired,5.3,0.0,No,,,2026-09-22,2026-11-02,VUL0000232,Open
+F-0233,,nas-backup-old,,Web server directory listing enabled,5.3,0.0,No,,,2026-10-17,2026-11-02,VUL0000233,In Progress

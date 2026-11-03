@@ -1,6 +1,54 @@
 asset_id,hostname,business_unit,system_owner,service,criticality,data_classification,internet_facing,lifecycle_status,last_scan_date
-AST-001,paymentservice-prod-01,Parking & Transit Payments,L. Chen,PaymentService,Critical,PCI,No,Active,2026-10-31
-AST-002,vpn-gateway-01,Enterprise Infrastructure,R. Thompson,Firewall,High,PCI,Yes,Active,2026-10-31
-AST-003,webapp-dev-03,Marketing & Web,T. Okafor,WebApp,Low,Public,No,Active,2026-10-30
-AST-004,student-portal-01,Student Information Systems,K. Nguyen,WebApp,High,FERPA,Yes,Active,2026-10-31
-AST-005,dbconnector-prod-05,HR & Payroll,A. Patel,DBConnector,Medium,Internal,No,Active,2026-10-29
+AST-001,authservice-prod-01,Student Information Systems,K. Nguyen,AuthService,High,FERPA,No,Active,2026-10-30
+AST-002,authservice-dev-02,Student Information Systems,,AuthService,Medium,Internal,No,Active,2026-10-28
+AST-003,dbconnector-prod-03,Student Information Systems,M. Garcia,DBConnector,High,FERPA,No,Active,2026-11-03
+AST-004,webapp-prod-04,Student Information Systems,T. Okafor,WebApp,Critical,FERPA,Yes,Active,2026-10-29
+AST-005,webapp-prod-05,Student Information Systems,L. Chen,WebApp,High,FERPA,Yes,Active,2026-09-05
+AST-006,webapp-dev-06,Student Information Systems,K. Nguyen,WebApp,Medium,Internal,No,Active,2026-10-27
+AST-007,authservice-prod-07,Student Information Systems,K. Nguyen,AuthService,Critical,FERPA,No,Active,2026-10-27
+AST-008,authservice-prod-08,Student Information Systems,D. Johnson,AuthService,Critical,FERPA,No,Active,2026-11-01
+AST-009,backupmanager-prod-09,Campus Health Services,A. Patel,BackupManager,Critical,HIPAA,No,Active,2026-10-29
+AST-010,dbconnector-prod-10,Campus Health Services,T. Okafor,DBConnector,Critical,HIPAA,No,Active,2026-10-27
+AST-011,dbconnector-prod-11,Campus Health Services,K. Nguyen,DBConnector,High,HIPAA,No,Active,2026-10-27
+AST-012,backupmanager-prod-12,Campus Health Services,K. Nguyen,BackupManager,Critical,HIPAA,No,Active,2026-11-03
+AST-013,dbconnector-prod-13,Campus Health Services,,DBConnector,Critical,HIPAA,No,Active,2026-11-03
+AST-014,webapp-stag-14,Campus Health Services,S. Kim,WebApp,Medium,HIPAA,No,Active,2026-10-31
+AST-015,paymentservice-prod-15,Parking & Transit Payments,K. Nguyen,PaymentService,Critical,PCI,Yes,Active,2026-10-27
+AST-016,webapp-dev-16,Parking & Transit Payments,A. Patel,WebApp,Medium,Internal,No,Active,2026-11-02
+AST-017,paymentservice-dev-17,Parking & Transit Payments,M. Garcia,PaymentService,Low,Internal,No,Active,2026-11-01
+AST-018,paymentservice-prod-18,Parking & Transit Payments,A. Patel,PaymentService,High,PCI,No,Active,2026-11-03
+AST-019,webapp-dev-19,Parking & Transit Payments,T. Okafor,WebApp,Medium,Internal,No,Active,2026-10-29
+AST-020,paymentservice-prod-20,Parking & Transit Payments,L. Chen,PaymentService,Critical,PCI,Yes,Active,2026-11-03
+AST-021,backupmanager-prod-21,Research Computing,L. Chen,BackupManager,High,CUI,No,Active,2026-11-01
+AST-022,dbconnector-prod-22,Research Computing,M. Garcia,DBConnector,High,CUI,No,Active,2026-11-01
+AST-023,kernel-prod-23,Research Computing,M. Garcia,Kernel,High,CUI,No,Active,2026-10-31
+AST-024,backupmanager-dev-24,Research Computing,M. Garcia,BackupManager,Medium,Internal,No,Active,2026-10-30
+AST-025,dbconnector-stag-25,Research Computing,K. Nguyen,DBConnector,Medium,CUI,No,Active,2026-10-31
+AST-026,dbconnector-stag-26,Research Computing,D. Johnson,DBConnector,Medium,CUI,No,Active,2026-11-01
+AST-027,backupmanager-prod-27,Research Computing,T. Okafor,BackupManager,High,CUI,No,Active,2026-10-28
+AST-028,dbconnector-prod-28,HR & Payroll,D. Johnson,DBConnector,Medium,Internal,No,Active,2026-07-28
+AST-029,authservice-stag-29,HR & Payroll,S. Kim,AuthService,Medium,Internal,No,Active,2026-11-01
+AST-030,dbconnector-prod-30,HR & Payroll,R. Thompson,DBConnector,Medium,Internal,No,Active,2026-10-28
+AST-031,authservice-dev-31,HR & Payroll,M. Garcia,AuthService,Medium,Internal,No,Active,2026-10-29
+AST-032,dbconnector-prod-32,HR & Payroll,K. Nguyen,DBConnector,Medium,Internal,No,Active,2026-11-02
+AST-033,dbconnector-prod-33,HR & Payroll,R. Thompson,DBConnector,Medium,Internal,No,Active,2026-07-18
+AST-034,webapp-dev-34,University Library,K. Nguyen,WebApp,Low,Internal,No,Active,2026-10-30
+AST-035,webapp-prod-35,University Library,R. Thompson,WebApp,High,Public,Yes,Active,2026-11-03
+AST-036,webapp-stag-36,University Library,A. Patel,WebApp,Medium,Public,No,Active,2026-10-27
+AST-037,webapp-prod-37,University Library,A. Patel,WebApp,Medium,Public,Yes,Active,2026-10-29
+AST-038,webapp-prod-38,University Library,T. Okafor,WebApp,High,Public,No,Active,2026-08-25
+AST-039,webapp-stag-39,University Library,K. Nguyen,WebApp,Medium,Public,No,Active,2026-10-28
+AST-040,firewall-stag-40,Enterprise Infrastructure,R. Thompson,Firewall,Medium,Internal,No,Active,2026-11-01
+AST-041,antivirus-prod-41,Enterprise Infrastructure,M. Garcia,Antivirus,High,Internal,No,Active,2026-11-03
+AST-042,authservice-prod-42,Enterprise Infrastructure,T. Okafor,AuthService,Medium,Internal,No,Active,2026-10-31
+AST-043,antivirus-prod-43,Enterprise Infrastructure,R. Thompson,Antivirus,High,Internal,No,Active,2026-10-28
+AST-044,authservice-prod-44,Enterprise Infrastructure,L. Chen,AuthService,High,Internal,No,Active,2026-10-30
+AST-045,authservice-prod-45,Enterprise Infrastructure,A. Patel,AuthService,High,Internal,No,Active,2026-11-02
+AST-046,webapp-prod-46,Marketing & Web,,WebApp,High,Public,Yes,Active,2026-10-30
+AST-047,webapp-prod-47,Marketing & Web,S. Kim,WebApp,Medium,Public,Yes,Active,2026-11-03
+AST-048,webapp-prod-48,Marketing & Web,R. Thompson,WebApp,High,Public,Yes,Active,2026-10-31
+AST-049,webapp-prod-49,Marketing & Web,A. Patel,WebApp,High,Public,Yes,Active,2026-10-31
+AST-050,webapp-prod-50,Marketing & Web,A. Patel,WebApp,Medium,Public,Yes,Active,2026-10-31
+AST-051,webapp-dev-51,Marketing & Web,T. Okafor,WebApp,Medium,Internal,No,Active,2026-07-26
+AST-052,webapp-prod-52,Marketing & Web,R. Thompson,WebApp,High,Public,No,Active,2026-11-01
+AST-053,webapp-prod-53,Marketing & Web,K. Nguyen,WebApp,Medium,Public,No,Active,2026-10-31
