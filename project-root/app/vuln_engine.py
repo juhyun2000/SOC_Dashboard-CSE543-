@@ -106,4 +106,44 @@ def run(data_dir):
     """Whole pipeline so far: load -> join -> score."""
     assets, findings = load_data(data_dir)
     merged = join_findings_to_assets(findings, assets)
-    return score_all(merged)
+    return track_remediation(score_all(merged))
+
+
+# ---------------------------------------------------------------------------
+# Remediation tracking
+# ---------------------------------------------------------------------------
+SLA_DAYS = {"P1": 7, "P2": 30, "P3": 60, "P4": 90}
+OPEN_STATUSES = {"Open", "In Progress", "Risk Accepted", "Not Verified"}
+
+
+def track_remediation(df, as_of=None):
+    """Check tickets against scan evidence, then work out deadlines."""
+    df = df.copy()
+    first_seen = pd.to_datetime(df["first_seen"])
+    last_seen = pd.to_datetime(df["last_seen"])
+    asset_scan = pd.to_datetime(df["last_scan_date"])
+
+    # Latest scan of each host: the inventory's scan date, or for unknown devices
+    # the scanner's most recent sighting of that host
+    host_latest = last_seen.groupby(df["hostname"]).transform("max")
+    latest_scan = asset_scan.fillna(host_latest)
+
+    # 1. Rescan validation: ticket says fixed, but the latest scan still found it
+    still_seen = (df["ticket_status"] == "Remediated") & (last_seen >= latest_scan)
+    df["status"] = df["ticket_status"].mask(still_seen, "Not Verified")
+    df["is_open"] = df["status"].isin(OPEN_STATUSES)
+
+    # 2. Deadlines: first detection + SLA days for the priority
+    if as_of is None:
+        as_of = max(last_seen.max(), asset_scan.max())  # "today" = date of the latest scan
+    df["due_date"] = (first_seen + pd.to_timedelta(df["priority"].map(SLA_DAYS), unit="D")).dt.date
+    days_left = (pd.to_datetime(df["due_date"]) - as_of).dt.days
+
+    df["sla_state"] = "Within SLA"
+    df.loc[days_left <= 7, "sla_state"] = "Due ≤7d"
+    df.loc[days_left < 0, "sla_state"] = "Overdue"
+    df.loc[df["status"] == "Risk Accepted", "sla_state"] = "Exception"
+    df.loc[df["status"] == "Remediated", "sla_state"] = "Closed"
+    df["days_overdue"] = (-days_left).clip(lower=0)
+    df.loc[~df["is_open"], "days_overdue"] = 0
+    return df
