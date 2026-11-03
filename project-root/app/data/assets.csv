@@ -1,0 +1,6 @@
+asset_id,hostname,business_unit,system_owner,service,criticality,data_classification,internet_facing,lifecycle_status,last_scan_date
+AST-001,paymentservice-prod-01,Parking & Transit Payments,L. Chen,PaymentService,Critical,PCI,No,Active,2026-10-31
+AST-002,vpn-gateway-01,Enterprise Infrastructure,R. Thompson,Firewall,High,PCI,Yes,Active,2026-10-31
+AST-003,webapp-dev-03,Marketing & Web,T. Okafor,WebApp,Low,Public,No,Active,2026-10-30
+AST-004,student-portal-01,Student Information Systems,K. Nguyen,WebApp,High,FERPA,Yes,Active,2026-10-31
+AST-005,dbconnector-prod-05,HR & Payroll,A. Patel,DBConnector,Medium,Internal,No,Active,2026-10-29

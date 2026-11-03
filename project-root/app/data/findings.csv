@@ -1,0 +1,11 @@
+finding_id,asset_id,hostname,cve,title,cvss,epss,kev,attack_technique,attack_tactic,first_seen,last_seen,ticket_id,ticket_status
+F-001,AST-001,paymentservice-prod-01,CVE-2021-34527,Windows Print Spooler RCE (PrintNightmare),8.8,0.94,Yes,T1068,TA0004,2026-10-20,2026-10-31,VUL0001001,Open
+F-002,AST-002,vpn-gateway-01,CVE-2023-4966,Citrix NetScaler session token leak (Citrix Bleed),7.5,0.96,Yes,T1190,TA0001,2026-10-28,2026-10-31,VUL0001002,In Progress
+F-003,AST-003,webapp-dev-03,CVE-2021-44228,Apache Log4j RCE (Log4Shell),10.0,0.97,Yes,T1190,TA0001,2026-09-15,2026-10-30,VUL0001003,Open
+F-004,AST-004,student-portal-01,,TLS 1.0/1.1 protocol enabled,6.5,0,No,T1557,TA0006,2026-08-01,2026-10-31,VUL0001004,Open
+F-005,AST-005,dbconnector-prod-05,CVE-2023-38545,curl SOCKS5 heap buffer overflow,9.8,0.02,No,T1203,TA0002,2026-10-10,2026-10-29,VUL0001005,Open
+F-006,AST-005,dbconnector-prod-05,CVE-2017-0144,Windows SMBv1 RCE (EternalBlue),8.1,0.96,Yes,T1210,TA0008,2026-09-01,2026-10-29,VUL0001006,Remediated
+F-007,AST-002,vpn-gateway-01,,Default administrative credentials,9.8,0,No,T1078.001; T1110,TA0001; TA0006,2026-10-05,2026-10-31,VUL0001007,Risk Accepted
+F-008,AST-004,student-portal-01,,SSL certificate expired,5.3,0,No,,,2026-10-25,2026-10-31,VUL0001008,Open
+F-009,,rpi-lab-cam-02,,Default administrative credentials,9.8,0,No,T1078.001; T1110,TA0001; TA0006,2026-10-01,2026-10-30,VUL0001009,Open
+F-010,AST-003,webapp-dev-03,CVE-2023-44487,HTTP/2 Rapid Reset DoS,7.5,0.80,Yes,T1499,TA0040,2026-10-26,2026-10-30,VUL0001010,Open
