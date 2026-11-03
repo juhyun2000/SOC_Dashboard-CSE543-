@@ -87,3 +87,23 @@ def score_finding(row):
     else:
         priority = "P4"
     return score, priority, "; ".join(reasons)
+
+
+def score_all(df):
+    """Score every finding and add risk_score, priority, reason and rank columns."""
+    df = df.copy()
+    results = [score_finding(row) for _, row in df.iterrows()]
+    df["risk_score"] = [r[0] for r in results]
+    df["priority"] = [r[1] for r in results]
+    df["reason"] = [r[2] for r in results]
+    # 1 = most urgent. method="min": ties share the same rank
+    df["cvss_rank"] = df["cvss"].rank(ascending=False, method="min").astype(int)
+    df["risk_rank"] = df["risk_score"].rank(ascending=False, method="min").astype(int)
+    return df
+
+
+def run(data_dir):
+    """Whole pipeline so far: load -> join -> score."""
+    assets, findings = load_data(data_dir)
+    merged = join_findings_to_assets(findings, assets)
+    return score_all(merged)
